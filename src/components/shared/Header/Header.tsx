@@ -1,12 +1,12 @@
 "use client";
 
 import { IconLogo, IconUser } from "@/src/components/common/Icon/Icon";
-import HeaderFilter from "@/src/components/shared/Header/header-filter/HeaderFilter";
+import HeaderFilter from "@/src/components/shared/Header/HeaderFilter";
 import { Globe, Menu, ShoppingCart } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="h-20 flex border-b border-gray-200 border-b-[1px] ">
+    <header className="h-20 flex border-b border-gray-200">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
         <IconLogo />
 

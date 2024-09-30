@@ -13,6 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         "background-200": "#2B2828",
         "background-300": "#443E3E",
+        "background-400": "#655D5E",
         gray: "#B3B3B3",
         "gray-200": "#515151",
         danger: "#CA323D",

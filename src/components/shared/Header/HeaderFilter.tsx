@@ -2,11 +2,14 @@
 
 import { CommonDropdownMenu } from "@/src/components/common/DropdownMenu/DropdownMenu";
 import { Input } from "@/src/components/common/Input/Input";
+import CategoryMenu from "@/src/components/shared/Header/CategoryMenu";
+import useGetMockData from "@/src/hooks/useGetMockData";
 import { cn } from "@/src/libs/utils/general";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 
 const HeaderFilter = () => {
+  const { selectedCategory } = useGetMockData();
   const [showCenterLine, setShowCenterLine] = useState(true);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
@@ -33,7 +36,6 @@ const HeaderFilter = () => {
             trigger={
               <div>
                 <Input
-                  placeholder="All"
                   label="Category"
                   onFocus={() => {
                     setShowCenterLine(false);
@@ -45,7 +47,7 @@ const HeaderFilter = () => {
                   onIconClick={() => {
                     console.log("onSearch");
                   }}
-                  value="All"
+                  value={selectedCategory}
                   className={cn("cursor-pointer", isCategoryOpen && "bg-background-300")}
                 />
               </div>
@@ -55,7 +57,7 @@ const HeaderFilter = () => {
               setShowCenterLine(!isOpen);
             }}
           >
-            <div className="bg-danger w-20 h-20">zxc</div>
+            <CategoryMenu />
           </CommonDropdownMenu>
         </div>
       </div>
