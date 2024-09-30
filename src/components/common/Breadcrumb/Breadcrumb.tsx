@@ -35,7 +35,7 @@ const BreadcrumbItem = React.forwardRef<HTMLLIElement, React.ComponentPropsWitho
   ({ className, ...props }, ref) => (
     <li
       ref={ref}
-      className={cn("inline-flex items-center gap-1.5", className)}
+      className={cn("inline-flex items-center gap-1.5 font-bold font-xl text-[32px]", className)}
       {...props}
     />
   ),
@@ -68,7 +68,7 @@ const BreadcrumbPage = React.forwardRef<HTMLSpanElement, React.ComponentPropsWit
       role="link"
       aria-disabled="true"
       aria-current="page"
-      className={cn("font-normal text-foreground", className)}
+      className={cn("text-foreground font-xl", className)}
       {...props}
     />
   ),
@@ -78,10 +78,11 @@ BreadcrumbPage.displayName = "BreadcrumbPage";
 const BreadcrumbSeparator = ({ children, className, ...props }: React.ComponentProps<"li">) => (
   <li
     aria-hidden="true"
-    className={cn("[&>svg]:size-3.5", className)}
+    className={cn("[&>svg]:size-3.5 text-[32px]", className)}
     {...props}
   >
-    {children ?? <ChevronRight />}
+    {/* biome-ignore lint/style/noUnusedTemplateLiteral: <explanation> */}
+    {children ?? `>`}
   </li>
 );
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator";

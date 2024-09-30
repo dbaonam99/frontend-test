@@ -6,7 +6,7 @@ import { Globe, Menu, ShoppingCart } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="h-20 flex">
+    <header className="h-20 flex border-b border-gray-200 border-b-[1px] ">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
         <IconLogo />
 

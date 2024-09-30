@@ -193,12 +193,7 @@ const CommonDropdownMenu = ({
       onOpenChange={onOpenChange}
       open={open}
     >
-      <DropdownMenuTrigger
-        asChild={typeof trigger !== "string"}
-        className="outline-none text-slate-300 data-[state=open]:text-primary font-medium text-lg h-10"
-      >
-        {trigger}
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild={typeof trigger !== "string"}>{trigger}</DropdownMenuTrigger>
       <DropdownMenuPortal>
         <DropdownMenuContent
           className={contentClassname}
