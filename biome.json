@@ -1,0 +1,88 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.7.1/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "complexity": {
+        "noForEach": "off",
+        "useOptionalChain": "off",
+        "useLiteralKeys": "off",
+        "noStaticOnlyClass": "off"
+      },
+      "style": {
+        "noParameterAssign": "off",
+        "noNonNullAssertion": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useKeyWithClickEvents": "off"
+      },
+      "correctness": {
+        "all": true
+      }
+    }
+  },
+
+  "formatter": {
+    "enabled": true,
+    "lineWidth": 120,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "attributePosition": "multiline"
+  },
+
+  "javascript": {
+    "formatter": {
+      "trailingCommas": "all",
+      "quoteStyle": "double",
+      "attributePosition": "multiline"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "files": {
+    "ignore": [
+      "node_modules",
+      "scripts",
+      "docker",
+      "coverage",
+      "docs",
+      "temp",
+      "tmp",
+      "out",
+      "output",
+      "build",
+      "dist",
+      "bin",
+      ".vscode",
+      ".idea",
+      ".vs",
+      ".github",
+      ".git",
+      ".hg",
+      ".svn",
+      ".DS_Store",
+      ".next",
+      ".yarn",
+      ".storybook",
+      "npm-debug.log",
+      "yarn-error.log",
+      "yarn-debug.log",
+      "yarn.lock",
+      "package-lock.json",
+      "package.json",
+      "package.js",
+      "storybook-static",
+      "vulcan/**/*",
+      ".vercel"
+    ]
+  }
+}
