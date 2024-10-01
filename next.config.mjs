@@ -1,5 +1,8 @@
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    BASIC_AUTH_PASSWORD: process.env.BASIC_AUTH_PASSWORD,
+  },
   images: {
     remotePatterns: [
       {
