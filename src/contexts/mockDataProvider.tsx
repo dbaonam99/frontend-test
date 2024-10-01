@@ -173,12 +173,12 @@ const MOCK_PRODUCTS = [
   },
   {
     id: 10,
-    name: "All 2",
+    name: "Avatars - Human-like 3",
     creator: "Creator name",
     rating: 5,
     price: 10,
-    categoryId: "3",
-    subcategoryId: "3.1",
+    categoryId: "1",
+    subcategoryId: "1.1",
   },
   {
     id: 11,

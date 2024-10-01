@@ -1,15 +1,17 @@
 import { StarFilledIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 interface ProductCardProps {
-  name: string;
-  creator: string;
-  rating: number;
-  price: number;
+  name?: string;
+  creator?: string;
+  rating?: number;
+  price?: number;
+  id?: string | number;
 }
 
-const ProductCard = ({ name, creator, rating, price }: ProductCardProps) => {
+const ProductCard = ({ name, creator, rating, price, id }: ProductCardProps) => {
   return (
-    <div>
+    <Link href={`/${id}`}>
       <div className="relative cursor-pointer bg-background-300 aspect-square rounded-xl mb-2 flex items-center justify-center">
         {name}
       </div>
@@ -24,7 +26,7 @@ const ProductCard = ({ name, creator, rating, price }: ProductCardProps) => {
         <p className="text-sm">{rating}</p>
       </div>
       <p className="text-sm font-bold cursor-pointer">${price}</p>
-    </div>
+    </Link>
   );
 };
 
