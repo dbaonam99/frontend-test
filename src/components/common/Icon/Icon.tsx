@@ -11,14 +11,15 @@ export interface IconWrapperProps {
 }
 
 const IconWrapper =
-  <P extends object>(WrappedComponent: ComponentType<P>) =>
+  <P extends object>(WrappedComp: ComponentType<P>) =>
   ({ className, ...rest }: IconWrapperProps) => {
     return (
       <i className={cn("block", className)}>
-        <WrappedComponent {...(rest as P)} />
+        <WrappedComp {...(rest as P)} />
       </i>
     );
   };
+IconWrapper.displayName = "Icon";
 
 export const IconLogo = IconWrapper(Logo);
 export const IconFilter = IconWrapper(Filter);
